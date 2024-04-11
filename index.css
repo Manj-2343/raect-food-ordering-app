@@ -1,16 +1,31 @@
 .header {
   display: flex;
   justify-content: space-between;
-  border: 2px solid black;
+  align-items: center; /* Align items vertically */
+  padding: 0px 20px; /* Add padding for better spacing */
+  background-color: #ffffff; /* Set background color */
+  border-radius: 10px; /* Add rounded corners */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+  transition: all 0.3s ease; /* Add transition for smoother hover effect */
+  font-family: "Roboto", sans-serif;
+}
+
+.header:hover {
+  transform: translateY(-2px); /* Move header slightly upwards on hover */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
+}
+
+/* Add gradient background for more visual appeal */
+.header {
+  background-image: linear-gradient(to right, #fad0c4, #ff9a9e);
 }
 .logo {
-  width: 100px;
-  height: 100px;
+  width: 60px;
+  height: 60px;
   border: none;
 }
 .nav-items > ul {
   font-size: 24px;
-  font-weight: bold;
   display: flex;
   list-style-type: none;
   padding: 0px 50px;
@@ -18,20 +33,56 @@
 .nav-items > ul > li {
   padding: 10px;
   margin: 10px;
+  font-size: 24px;
+  color: #ffffff; /* Text color */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
 }
 .search {
   padding: 15px;
 }
 .res-card {
   width: 250px;
-  padding: 5px;
+  height: 400px;
+  padding: 13px;
   margin: 10px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease; /* Add transition for smoother hover effect */
+  font-family: "Roboto", sans-serif;
 }
+
 .res-card:hover {
-  border: 1px solid black;
   cursor: pointer;
-  box-shadow: 0 0 50px rgba(223, 54, 130, 0.2);
+  transform: translateY(-5px); /* Move the card slightly upwards */
+  box-shadow: 0 0 20px rgba(223, 54, 130, 0.4); /* Adjusted shadow for hover effect */
 }
+
+/* Add an inner glow effect on hover */
+.res-card:hover::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  background-color: rgba(223, 54, 130, 0.2); /* Adjusted background color */
+  z-index: -1; /* Ensure the inner glow is behind the card content */
+}
+
+/* Add a subtle scale animation on hover */
+.res-card:hover {
+  transform: scale(1.05);
+}
+.link-without-underline {
+  text-decoration: none;
+  color: black;
+}
+
 .res-logo {
   width: 100%;
   height: 30vh;
@@ -40,11 +91,227 @@
   display: flex;
   flex-wrap: wrap;
 }
+.filter {
+  display: flex;
+  justify-content: space-between;
+}
 .filter-btn {
-  margin: 10px;
+  margin: 5px;
   cursor: pointer;
   background-color: red;
   color: white;
   border: none;
-  padding: 8px 16px;
+  font-family: "Roboto", sans-serif;
 }
+.shimmer-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+.shimmer-card {
+  width: 250px;
+  height: 400px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  padding: 20px;
+  margin: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.shimmer-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -150px;
+  width: 300px;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    transparent 0%,
+    #f0f0f0 50%,
+    transparent 100%
+  );
+  animation: shimmer 1.5s infinite linear;
+}
+
+@keyframes shimmer {
+  100% {
+    transform: translateX(150px);
+  }
+}
+.login-btn {
+  background-color: red;
+  border: none;
+  color: white;
+  padding: 0px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 15px 2px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.login-btn:hover {
+  background-color: #b00061; /* Darker green on hover */
+}
+.search {
+  display: flex;
+  align-items: center;
+}
+
+.search-box {
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  width: 200px;
+}
+
+.search-box:focus {
+  outline: none;
+  border-color: #f03c45; /* Change border color on focus */
+}
+
+.search-button {
+  background-color: red; /* Blue button color */
+  color: #fff; /* White text color */
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-left: 10px; /* Add space between input and button */
+}
+
+.search-button:hover {
+  background-color: #f3131e; /* Darker blue on hover */
+}
+/* specific Items */
+.menu {
+  max-width: 50vw;
+  max-height: 100vh;
+  margin: 0 auto;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  overflow-y: auto;
+}
+.headingName {
+  font-size: 34px;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  margin: 10px 0px;
+  text-align: center;
+}
+.cuisines {
+  font-size: 20px;
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+  color: #b00061;
+}
+.menuItem {
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+}
+.accordion {
+  max-width: 200vh;
+  max-height: 60vh;
+  margin: 15px auto 0;
+  border-radius: 3px;
+  overflow-y: auto;
+}
+
+.accordion-visible {
+  background: #ec0e0e;
+  width: 100%;
+  color: #fff;
+  cursor: pointer;
+  border: 1px solid #e82296;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 7px 15px;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+}
+
+.accordion-visible h2 {
+  font-size: 20px;
+}
+
+.accordion-toggle {
+  height: 0px;
+  font-size: 18px;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out, height 0.3s 0.3s ease-in-out;
+  color: #333;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+.animated {
+  opacity: 1;
+  transition: height 0.3s ease-in-out, opacity 0.3s 0.3s ease-in-out;
+}
+
+.accordion-toggle div {
+  margin: 0;
+  pointer-events: none;
+  line-height: 1.4;
+}
+.item-container span {
+  font-weight: bold;
+  font-size: 20px;
+  font-family: "Roboto", sans-serif;
+  color: #b00061;
+}
+.item-container p {
+  margin: 0; /* Remove default margin from paragraphs */
+  font-family: "Roboto", sans-serif;
+}
+.container {
+  display: flex;
+}
+
+.left {
+  flex: 7; /* Takes 70% of the container's width */
+}
+
+.right {
+  flex: 3; /* Takes 30% of the container's width */
+}
+
+/* Optional styling */
+.container > div {
+  padding: 10px;
+  box-sizing: border-box; /* Includes padding in width calculation */
+}
+
+.right {
+  position: relative; /* Set the parent container to relative positioning */
+}
+
+.image-button {
+  position: absolute; /* Set the button to absolute positioning */
+  top: 80%; /* Position the button vertically at 50% from the top of the parent */
+  left: 50%; /* Position the button horizontally at 50% from the left of the parent */
+  transform: translate(-50%, -50%); /* Center the button both horizontally and vertically */
+  z-index: 1; /* Ensure the button is above the image */
+  /* Additional styling for the button */
+  background-color: rgb(7, 62, 62); /* Blue button color */
+  color: #fff; /* White text color */
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.image {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
