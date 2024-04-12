@@ -13,9 +13,7 @@ export default function RestaurantCategory({ data, toggle, setShowIndex }) {
     setShowIndex(!toggle);
   };
 
-  const handleContentClick = () => {
-    console.log("Content area clicked");
-  };
+  
   return (
     <div className="accordion">
       <button onClick={toggleState} className="accordion-visible">
@@ -25,10 +23,8 @@ export default function RestaurantCategory({ data, toggle, setShowIndex }) {
         <span className={toggle && "active"}>🔽</span>
       </button>
       <div
-        className={toggle ? "accordion-toggle animated" : "accordion-toggle"}
         style={{ height: toggle ? `${heightEl}` : "0px" }}
         ref={refHeight}
-        onClick={handleContentClick}
       >
         <ItemList items={data?.itemCards} />
       </div>

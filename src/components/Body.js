@@ -55,7 +55,7 @@ const Body = () => {
           </div>
           {/* Modify your context */}
           <div className="search">
-            <input
+            <input 
               className="search-box"
               placeholder="Search..."
               value={loggedInUser}

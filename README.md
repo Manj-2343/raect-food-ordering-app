@@ -16,5 +16,13 @@
 -Diagnostics
 -ErrorHandling
 -HTTPS
--Tree Shaking-remove unused code 
+-Tree Shaking-remove unused code
 -Different dev and prod bundlers
+
+#Redux Toolkit
+->Install the @reduxjs/toolkit and redux-redux
+->Build our store
+->Connect our store to our app
+->Create a Slice (Cart slice)
+->Dispatch an action
+->Selector
