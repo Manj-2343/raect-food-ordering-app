@@ -371,3 +371,55 @@
 .clear-button:hover {
   background-color: #800356; /* Darker red on hover */
 }
+.contact-form {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  font-family: "Roboto", sans-serif;
+}
+
+.contact-form h2 {
+  margin-top: 0;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: bold;
+  font-family: "Roboto", sans-serif;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.form-group textarea {
+  resize: vertical;
+}
+
+button[type="submit"] {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #ef1612;
+  color: #fff;
+  cursor: pointer;
+  font-family: "Roboto", sans-serif;
+}
+
+button[type="submit"]:hover {
+  background-color: #d82020;
+}
