@@ -11,15 +11,15 @@ const RestaurantMenu = () => {
   if (resInfo === null || resInfo === undefined) return <Shimmer />;
   const { name, city, cuisines, costForTwoMessage } =
     resInfo?.cards[2]?.card?.card?.info;
-  const { itemCards } =
-    resInfo?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card;
+  // const { itemCards } =
+  //   resInfo?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card;
   const categories =
     resInfo?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter(
       (c) =>
         c.card?.card?.["@type"] ===
         "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory"
     );
-
+  console.log("ItemsCard", resInfo);
   return (
     <div className="menu">
       <h1 className="headingName">{name}</h1>
@@ -29,7 +29,7 @@ const RestaurantMenu = () => {
       </h5>
       <h2 className="menuItem">Menu</h2>
       <ul className="accordion">
-        {categories.map((category, index) => {
+        {categories?.map((category, index) => {
           return (
             <React.Fragment key={index}>
               <RestaurantCategory
@@ -39,7 +39,7 @@ const RestaurantMenu = () => {
               />
             </React.Fragment>
           );
-        })}
+        }) || <Shimmer />}
       </ul>
     </div>
   );

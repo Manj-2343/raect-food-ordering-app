@@ -13,7 +13,6 @@ const Header = () => {
 
   // subscribing the store using a selector (is hook in react )
   const cartItems = useSelector((store) => store.cart.items);
-  console.log(cartItems);
   return (
     <>
       <div className="header">

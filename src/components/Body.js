@@ -23,7 +23,7 @@ const Body = () => {
   /**set the higher order component=>here the withPromotedLabel is the higher order component
    * const RestaurantCardPromoted = withPromotedLabel(RestaurantCard);
    */
-
+  
   const { loggedInUser, setUserName } = useContext(UserContext);
   return listOfRestaurants?.length === 0 ? (
     <Shimmer />
@@ -55,7 +55,7 @@ const Body = () => {
           </div>
           {/* Modify your context */}
           <div className="search">
-            <input 
+            <input
               className="search-box"
               placeholder="Search..."
               value={loggedInUser}
